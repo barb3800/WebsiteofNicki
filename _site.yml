@@ -1,0 +1,8 @@
+name: "Website of Nicki"
+navbar:
+  title: "Website of Nicki"
+  left:
+    - text: "Home"
+      href: index.html
+    - text: "About Nicki"
+      href: about.html
