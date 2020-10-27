@@ -7,8 +7,13 @@ output: html_document
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
+# git add -A to stage files
 ```
 
 Not sure what to put here... boop boop de boop.
 
 can you see me?
+
+https://github.com/barb3800/blogofnicki.git
+
+https://github.com/barb3800/WebsiteofNicki.git
