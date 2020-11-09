@@ -2,11 +2,19 @@ name: "Website of Nicki"
 navbar:
   title: "Website of Nicki"
   left:
-    - text: "Home"
+    - text: "About Me"
       href: index.html
-    - text: "About Nicki"
+    - text: "Projects and Research"
       href: about.html
-      
+    - text: "Calendar"
+      href: Calendar.html
+    - text: "Publications and Presentations"
+      href: publications.html
+    - text: "Teaching"
+      href: teaching.html
+    - text: "Resources"
+      href: Resources.html
+
 output:
   html_document:
     theme: cosmo
