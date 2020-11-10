@@ -3,9 +3,9 @@ navbar:
   title: "Website of Nicki"
   left:
     - text: "About Me"
-      href: index.html
-    - text: "Projects and Research"
       href: about.html
+    - text: "Projects and Research"
+      href: projects_research.html
     - text: "Calendar"
       href: Calendar.html
     - text: "Publications and Presentations"
