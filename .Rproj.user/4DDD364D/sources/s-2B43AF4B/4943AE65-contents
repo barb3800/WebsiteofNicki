@@ -1,0 +1,16 @@
+---
+title: "Resources"
+output: html_document
+css: styles.css
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## **This is an example of how to embed a google spreadsheet into a website.**
+
+<div class="h_iframe">
+<img class="ratio" src="http://placehold.it/16x12"/>
+<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRUEsOnlW4sPyeqA283XdGqSudf4lZ3t49xQNjWJX6iNPdtIWPCIOYWW5p9G9Hjo3V-qJ9bS8jAYDrR/pubhtml?widget=true&amp;headers=false" style="border: 0" frameborder="0" scrolling="no"></iframe>
+</div>
