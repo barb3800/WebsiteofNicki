@@ -10,7 +10,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 
 ### **Graduate Teaching Experience**:
-*University of Maryland, Dep. of Biology*
+*University of Maryland, Department of Biology*
 
   * BSCI 160/161: Principles of Ecology and Evolution Laboratory and Lecture
   * BSCI 334/335: Mammalogy Laboratory and Lecture

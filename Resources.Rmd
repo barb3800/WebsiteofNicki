@@ -8,7 +8,7 @@ css: styles.css
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-## **This is an example of how to embed a google spreadsheet into a website.**
+## **This is a list of different STEM organizations that I am affiliated with- check them out!**
 
 <div class="h_iframe">
 <img class="ratio" src="http://placehold.it/16x12"/>

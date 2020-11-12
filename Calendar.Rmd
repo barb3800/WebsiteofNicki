@@ -9,7 +9,7 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 # **This is my personal calendar!**
-You can click on any scheduled event and it will show the description and details.
+Send me an email to book a virtual conversation.
 
 <div class="h_iframe">
 <img class="ratio" src="http://placehold.it/16x12"/>

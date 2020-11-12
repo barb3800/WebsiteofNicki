@@ -10,9 +10,9 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## Recent Publications 
 
-**Barbour N**, Shillinger GL, Hoover HL, Williamson SA, Coles VJ, Liang D, Fagan WF, Bailey H (in review) Environmental and biological factors influencing dispersal of neonate leatherback turtles (*Dermochelys coriacea*) from an endangered Costa Rican nesting population. Submitted journal: Frontiers in Marine Science
+**Barbour N**, Shillinger GL, Hoover HL, Williamson SA, Coles VJ, Liang D, Fagan WF, Bailey H. Environmental and biological factors influencing dispersal of neonate leatherback turtles (*Dermochelys coriacea*) from an endangered Costa Rican nesting population. Submitted journal: Frontiers in Marine Science
 
-Link to Published Article: [link](https://www.frontiersin.org/articles/10.3389/fmars.2020.582933/full?&utm_source=Email_to_authors_&utm_medium=Email&utm_content=T1_11.5e1_author&utm_campaign=Email_publication&field=&journalName=Frontiers_in_Marine_Science&id=582933)
+*Link to Published Article*: [link](https://www.frontiersin.org/articles/10.3389/fmars.2020.582933/full?&utm_source=Email_to_authors_&utm_medium=Email&utm_content=T1_11.5e1_author&utm_campaign=Email_publication&field=&journalName=Frontiers_in_Marine_Science&id=582933)
 
 Degenford, HJ, Liang D, Hoover AL, **Barbour N** (*in review*) Using Fisheries Data to Predict the Occurrence of Bycatch for Leatherback Sea Turtles (*Dermochelys coriacea*) in the Southeast Pacific. Submitted Journal: Journal of Applied Ecology
 

@@ -1,5 +1,5 @@
 ---
-title: "Website of Nicki"
+title: "Welcome to the 'Website of Nicki'! Click a tab to learn more about me and my research..."
 output: html_document
 ---
 
@@ -9,3 +9,4 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 
+![](Headshot_Picture.jpg){}
