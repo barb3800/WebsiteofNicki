@@ -15,18 +15,15 @@ knitr::opts_chunk$set(echo = TRUE)
 
 <font size= "4">(**Full CV upon request**)</font>
 
-<font size="5"> I am a movement and spatial ecologist that specializes in marine systems and quantitative methods. I am currently a 4th year Ph.D. candidate in the **Bailey lab at the University of Maryland Center for Environmental Science** ([link](https://www.umces.edu/helen-bailey)) and the **Fagan lab at the University of Maryland College Park** ([link](http://science.umd.edu/biology/faganlab/index.html)). 
+<font size="4"> I am a movement and spatial ecologist and a 5th year Ph.D. candidate (graduation: Oct 2022) in the **Bailey lab at the University of Maryland Center for Environmental Science** ([link](https://www.umces.edu/helen-bailey)) and the **Fagan lab at the University of Maryland College Park** ([link](http://science.umd.edu/biology/faganlab/index.html)). 
 
-  My dissertation focuses on the movement ecology of sea turtles through different life stages. In addition to my dissertation research, I have a strong interest in citizen science, science outreach & STEM education initiatives, and interdisciplinary collaborations that bridge social and natural sciences. </font>
+<font size="4"> I am interested in using quantitative and interdisciplinary approaches to better understand the movement ecology and habitat use of species and inform "real life" management tools and policy. 
+
+<font size="4"> My dissertation has been focused on sea turtles (e.g. my first chapter, Barbour et al. 2020, and Degenford et al. 2020) but I also have applied my interests to other interesting systems, including an NSF-funded SESYNC project on offshore aquaculture (pub in review); the movement ecology and habitat use of Sonoran pronghorn (pub in prep); and ecolabeling for shellfish aquaculture (Gray et al. 2020). Of my three other dissertation chapters, two focus on developing quantitative tools for understanding multidimensional behavior and informing the dynamic management of migratory species- please see Upwell's South Pacific TurtleWatch tool for an example of my recent work ([link](https://www.upwell.org/sptw)). 
+
+<font size="4"> In addition to my dissertation research, I have a strong interest in teaching, citizen science, science outreach, and interdisciplinary collaborations that bridge social and natural sciences. See the "Projects and Research" tab for details on some of my recent collaborations and work. See the "Teaching" tab for details on my teaching experience. </font>
   
-## **Contact Me:** 
-<nbarbour@csumb.edu>
-<nbarbour@umd.edu>
-<nbarbour@umces.edu>
 
-### **Linked In**: [link](https://www.linkedin.com/in/nicole-barbour-970589168/)
-### **Google Scholar**: [link](https://scholar.google.com/citations?user=XolPQ8cAAAAJ&hl=en)
-### **GitHub**: [link](https://github.com/barb3800)
 
 
 

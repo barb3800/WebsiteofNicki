@@ -6,14 +6,12 @@ navbar:
       href: about.html
     - text: "Projects and Research"
       href: projects_research.html
-    - text: "Calendar"
-      href: Calendar.html
+    - text: "Contact Me"
+      href: ContactMe.html
     - text: "Publications and Presentations"
       href: publications.html
     - text: "Teaching"
       href: teaching.html
-    - text: "Resources"
-      href: Resources.html
 
 output:
   html_document:

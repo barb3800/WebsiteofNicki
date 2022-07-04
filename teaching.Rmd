@@ -16,12 +16,15 @@ knitr::opts_chunk$set(echo = TRUE)
   * BSCI 334/335: Mammalogy Laboratory and Lecture
   * BSCI 170/171: Principles of Molecular and Cellular Biology Laboratory and Lecture
   * BSCI 202/201: Human Anatomy and Physiology II Laboratory and Lecture
+  * STAT 689: Research Interaction in Teams, Movement Ecology
 
 <br>
 
 ### **External Teaching** (*Lectures*):
 
   * *Learning and Navigation*. Guest Lecturer: University of Maryland, Principles of Ecology and Evolution. 
+  * *Introduction to Marine Mammals*. Guest Lecturer: University of Maryland, Mammalogy.
+  * *Using RStudio & GitHub for Project Management*. Guest Lecturer: University of Maryland, Research Interaction in Teams.
 
 <br>
 

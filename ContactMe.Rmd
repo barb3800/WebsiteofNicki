@@ -1,0 +1,22 @@
+---
+title: "Contact Me"
+output: html_document
+css: styles.css
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+I am always interested in discussing potential collaborations and opportunities! 
+
+#### **Details:** 
+Email: <nbarbour@umd.edu>, 
+<nbarbour@umces.edu>
+
+#### **Linked In**: [link](https://www.linkedin.com/in/nicole-barbour-970589168/)
+#### **Google Scholar**: [link](https://scholar.google.com/citations?user=RPzbOOgAAAAJ&hl=en)
+#### **GitHub**: [link](https://github.com/barb3800)
+
+
