@@ -13,7 +13,7 @@
 
 <title>Publications and Presentations</title>
 
-<script src="site_libs/header-attrs-2.14/header-attrs.js"></script>
+<script src="site_libs/header-attrs-2.25/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/cosmo.min.css" rel="stylesheet" />
@@ -142,11 +142,15 @@ $(document).ready(function () {
     href = "index.html";
   var menuAnchor = $('a[href="' + href + '"]');
 
-  // mark it active
-  menuAnchor.tab('show');
-
-  // if it's got a parent navbar menu mark it active as well
-  menuAnchor.closest('li.dropdown').addClass('active');
+  // mark the anchor link active (and if it's in a dropdown, also mark that active)
+  var dropdown = menuAnchor.closest('li.dropdown');
+  if (window.bootstrap) { // Bootstrap 4+
+    menuAnchor.addClass('active');
+    dropdown.find('> .dropdown-toggle').addClass('active');
+  } else { // Bootstrap 3
+    menuAnchor.parent().addClass('active');
+    dropdown.addClass('active');
+  }
 
   // Navbar adjustments
   var navHeight = $(".navbar").first().height() + 15;
@@ -175,8 +179,8 @@ $(document).ready(function () {
   border-radius: 4px;
 }
 
-.tabset-dropdown > .nav-tabs > li.active:before {
-  content: "";
+.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "\e259";
   font-family: 'Glyphicons Halflings';
   display: inline-block;
   padding: 10px;
@@ -184,16 +188,9 @@ $(document).ready(function () {
 }
 
 .tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
-  content: "&#xe258;";
-  border: none;
-}
-
-.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
-  content: "";
+  content: "\e258";
   font-family: 'Glyphicons Halflings';
-  display: inline-block;
-  padding: 10px;
-  border-right: 1px solid #ddd;
+  border: none;
 }
 
 .tabset-dropdown > .nav-tabs > li.active {
@@ -278,50 +275,68 @@ $(document).ready(function () {
 </div>
 
 
-<p><img src="turkey_vulture_presentation.png" style="width:75.0%" /></p>
+<p><img src="turkey_vulture_presentation.png" style="width:50.0%" /></p>
 <div id="publications" class="section level2">
 <h2>Publications</h2>
-<p><strong>Barbour N</strong>, Shillinger GL, Gurarie ED, Hoover AL,
-Gaspar P, Temple-Boyer J, Candela T, Fagan WF, and Bailey H (<em>in
-prep</em>) Incorporating multidimensional behavior into a dynamic
-management tool for a critically endangered and migratory species.
-Journal: Conservation Biology</p>
-<p>Guthrie A^, <strong>Barbour N^</strong>, Cannon S^, Marriott SE^,
-Racine P^, Young R^, Bae A, Lester SE, Michaelis A (<em>in review</em>)
-A socio-environmental framework for identifying gaps between among
-proposed offshore aquaculture development, public perception, and local
-communities: a Florida case study. Journal: PlosOne ^indicates equal
-first author status</p>
+<p><strong>Barbour N</strong>, Kelly A, and Gurarie ED (in prep).
+<em>The “permeability” R package: A maximum-likelihood based tool to
+quantify the permeability of linear barriers to animal movement</em>.
+Intended Journal: Methods in Ecology and Evolution</p>
+<p><strong>Barbour N</strong>, Bright J, …, Fleming CH, and Fagan WF (in
+prep). <em>Post-captivity effects and seasonal variability in Sonoran
+pronghorn (Antilocapra americana sonoriensis) survival, home ranges, and
+behavior</em>. Intended Journal: Journal of Wildlife Management</p>
+<p>Candela T,… <strong>Barbour N</strong>,… Casella F, and Shillinger GL
+(2024). <em>Novel microsatellite tags hold promise for illuminating the
+Lost Years in four sea turtle species</em>. Journal: Animals. Weblink:
+<em>TBD</em></p>
+<p><strong>Barbour N</strong>, Shillinger GL, …, Fagan WF, and Bailey H
+(2023). <em>Incorporating multidimensional behavior into a risk
+management tool for a critically endangered and migratory species</em>.
+Journal: Conservation Biology. <a
+href="https://conbio.onlinelibrary.wiley.com/doi/full/10.1111/cobi.14114">Weblink</a></p>
+<p>Guthrie A^, <strong>Barbour N</strong>^, Cannon S^, Marriott SE^,
+Racine P^, Young R^, …, Michaelis A (2023). <em>A socio-environmental
+framework for identifying gaps between among proposed offshore
+aquaculture development, public perception, and local communities: a
+Florida case study</em>. Journal: Journal of the World Aquaculture
+Society <a
+href="https://onlinelibrary.wiley.com/doi/full/10.1111/jwas.13031">Weblink</a>
+^indicates equal first author status</p>
+<p><strong>Barbour N</strong>, Bailey H, Shillinger GL, Candela T,
+Gaspar P, … and Fagan WF (2023). <em>Satellite tracking of head-started
+juvenile green turtles (Chelonia mydas) reveals release effects and an
+ontogenetic shift</em>. Journal: Animals <a
+href="https://www.mdpi.com/2076-2615/13/7/1218">Weblink</a></p>
 <p><strong>Barbour N</strong>, Robillard AJ, Shillinger GL, Lyubchich V,
-Secor DH, Fagan WF, Bailey H (<em>in review</em>) Using machine learning
-approaches to classify vertical movement profiles and behavior. Journal:
-Ecosphere</p>
-<p><strong>Barbour N</strong>, Shillinger GL, Hoover HL, Williamson SA,
-Coles VJ, Liang D, Fagan WF, Bailey H. (2020) Environmental and
-biological factors influencing dispersal of neonate leatherback turtles
-(<em>Dermochelys coriacea</em>) from an endangered Costa Rican nesting
-population. Journal: Frontiers in Marine Science</p>
-<p><em>Link to Published Article</em>: <a
-href="https://www.frontiersin.org/articles/10.3389/fmars.2020.582933/full?&amp;utm_source=Email_to_authors_&amp;utm_medium=Email&amp;utm_content=T1_11.5e1_author&amp;utm_campaign=Email_publication&amp;field=&amp;journalName=Frontiers_in_Marine_Science&amp;id=582933">link</a>
-<br></p>
-<p>Degenford, HJ, Liang D, Bailey H, Hoover AL, … <strong>Barbour
-N</strong>, Shillinger GL Using fisheries observation data to develop a
-predictive species distribution model for endangered sea turtles.
-Journal: Conservation Science and Practice</p>
-<p><em>Link to Published Article</em>: <a
-href="https://conbio.onlinelibrary.wiley.com/doi/full/10.1111/csp2.349">link</a>
-<br></p>
+Secor DH, Fagan WF, Bailey H (2023). <em>Clustering and classification
+of vertical movement profiles for ecological inference of behavior</em>.
+Journal: Ecosphere <a
+href="https://esajournals.onlinelibrary.wiley.com/doi/full/10.1002/ecs2.4384">Weblink</a></p>
+<p><strong>Barbour N</strong>, Shillinger GL, …., Bailey H (2020).
+<em>Environmental and biological factors influencing dispersal of
+neonate leatherback turtles (Dermochelys coriacea) from an endangered
+Costa Rican nesting population</em>. Journal: Frontiers in Marine
+Science <a
+href="https://www.frontiersin.org/articles/10.3389/fmars.2020.582933/full">Weblink</a></p>
+<p>Degenford, HJ, Liang D, Bailey H, Hoover AL, … <em>Barbour N</em>,
+Shillinger GL (2020). <em>Using fisheries observation data to develop a
+predictive species distribution model for endangered sea turtles</em>.
+Journal: Conservation Science and Practice <a
+href="https://conbio.onlinelibrary.wiley.com/doi/full/10.1111/csp2.349">Weblink</a></p>
 <p>Gray M, <strong>Barbour N</strong>, Campbell B, Robillard AJ,
-Todd-Rodriguez A, Xiao H, Plough L (2021) Ecolabels can improve public
-perception and farm profits for shellfish aquaculture. Journal:
-Aquaculture Environment Interactions</p>
-<p><em>Link to Published Article</em>: <a
-href="https://archive.hshsl.umaryland.edu/handle/10713/15158">link</a></p>
-<p><br></p>
+Todd-Rodriguez A, Xiao H, Plough L (2020). <em>Ecolabels can improve
+public perception and farm profits for shellfish aquaculture</em>.
+Journal: Aquaculture Environment Interactions <a
+href="https://www.int-res.com/abstracts/aei/v13/p13-20">Weblink</a></p>
 <p><br></p>
 </div>
 <div id="recent-presentations" class="section level2">
 <h2>Recent Presentations</h2>
+<p><strong>Barbour N</strong>, et al. (<em>oral presentation</em>).
+Seasonal patterns in Sonoran pronghorn (<em>Antilocapra americana
+sonoriensis</em>) survival, home ranges, and movement within a managed
+rangeland. Invited Speaker, Adaptive Peaks, SUNY ESF 2023.</p>
 <p><strong>Barbour N</strong>, (<em>oral presentation</em>).
 Incorporating Multidimensional Behavior into Dynamic Management. Guest
 Lecturer, Upwell Roundtable 2022.</p>
@@ -337,11 +352,10 @@ Workhop 2021.</p>
 <p><strong>Barbour N</strong>. (<em>oral presentation</em>).
 Introduction to Marine Mammals. Guest Lecturer: University of Maryland,
 Mammalogy, 2021.</p>
-<p><strong>Barbour N</strong>, Bailey H, Hoover HL, Ashley N, Williamson
-SA, Shillinger GL (<em>oral presentation</em>). Environmental and
-biological drivers of endangered leatherback hatchling (<em>Dermochelys
-coriacea</em>) early dispersal from an endangered Costa Rican nesting
-population. Conference: Ocean Sciences Meeting 2020.</p>
+<p><strong>Barbour N</strong>, et al. (<em>oral presentation</em>).
+Environmental and biological drivers of endangered leatherback hatchling
+(<em>Dermochelys coriacea</em>) early dispersal from an endangered Costa
+Rican nesting population. Conference: Ocean Sciences Meeting 2020.</p>
 <p><strong>Barbour N</strong>. (<em>oral presentation</em>). Tracking
 live marine animals. Webinar: NASA Endeavor STEM Program 2020.</p>
 <p><strong>Barbour N</strong>. (<em>oral presentation</em>). Learning

@@ -7,31 +7,61 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 ![](gradterpexchange.png)
-
-
-### **Graduate Teaching Experience**:
-*University of Maryland, Department of Biology*
-
-  * BSCI 160/161: Principles of Ecology and Evolution Laboratory and Lecture
-  * BSCI 334/335: Mammalogy Laboratory and Lecture
-  * BSCI 170/171: Principles of Molecular and Cellular Biology Laboratory and Lecture
-  * BSCI 202/201: Human Anatomy and Physiology II Laboratory and Lecture
-  * STAT 689: Research Interaction in Teams, Movement Ecology
-
 <br>
 
-### **External Teaching** (*Lectures*):
+### **SUNY College of Environmental Science and Forestry (Spring 2023-Spring 2024)**:
 
-  * *Learning and Navigation*. Guest Lecturer: University of Maryland, Principles of Ecology and Evolution. 
-  * *Introduction to Marine Mammals*. Guest Lecturer: University of Maryland, Mammalogy.
-  * *Using RStudio & GitHub for Project Management*. Guest Lecturer: University of Maryland, Research Interaction in Teams.
+  * **Full Time Instructor**, EFB 654 *Intro to R* 
+(Graduate, with undergraduates by petition):
+Developed independent lecture curriculum, taught lectures
+
+  * **Full Time Co-Instructor**, EFB 483 *Mammal Diversity*
+(Undergraduate):
+Developed independent lecture and laboratory curriculum, managed teaching assistants and laboratory, co-taught lectures
+  
+  * **Part Time Co-Instructor**, EFB 796 *Techniques and Concepts in Spatial and Movement Ecology*
+(Graduate):
+Collaboratively taught and developed lecture content, including an online open-source movement ecology book, [Techniques and Concepts in Movement Ecology Book (Work in Progress)](https://eligurarie.github.io/MovementEcologyBook/)
+
+<br>
+  
+### **University of Maryland College Park (Fall 2017-Spring 2022)**:
+
+  * **Teaching Assistant and Lab Manager**, BSCI 334/335 *Mammalogy*
+(Undergraduate):
+Developed laboratory curriculum, managed and organized all laboratory materials, taught all laboratory sections, assisted with lecture grading and proctoring *Note: Included hybrid classes*
+  
+  * **Teaching Assistant**, STAT 689 *Research Interaction in Teams, Movement Ecology*
+(Graduate, with undergraduates by petition):
+Managed GitHub repository and management of class research projects and code
+  
+  * **Teaching Assistant**, BSCI 160/161 *Principles of Ecology and Evolution Laboratory and Lecture*
+(Undergraduate): Taught laboratory material and assisted with lecture grading and proctoring
+  
+  * **Teaching Assistant**, BSCI 170/171 *Principles of Molecular and Cellular Biology Laboratory and Lecture*
+(Undergraduate): Taught laboratory material and assisted with lecture grading and proctoring
+  
+  * **Teaching Assistant**, BSCI 202/201 *Human Anatomy and Physiology II Laboratory and Lecture*
+(Undergraduate): Taught laboratory material and assisted with lecture grading and proctoring. *Note: Included hybrid and fully-online classes*
 
 <br>
 
 ### **Developed Syllabi**:
 
-I teach Mammalogy (BSCI 334/335) in the Spring and as the sole teaching assistant for the course, I have been "revamping" it and developing/updating content. This is reflected in the syllabus written by me below. 
+**EFB 654**, *Intro to R*
 
-*Soon to come*: I am working on re-creating the TA manual and creating R-markdown documents for student final projects for this course.
+![](EFB654_IntrotoR_2024.pdf){width=75%}
 
-![Image Title](course_syllabus.pdf){width=75%}
+<br>
+
+**EFB 483**, *Mammal Diversity*
+
+![](EFB483_LectureSyllabus_11032023.pdf){width=75%}
+
+<br>
+
+**BSCI 335**, *Mammalogy*
+
+![](Syllabus_BSCI335_NB_Spring2022.pdf){width=75%}
+
+<br>

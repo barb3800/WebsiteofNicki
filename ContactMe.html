@@ -13,7 +13,7 @@
 
 <title>Contact Me</title>
 
-<script src="site_libs/header-attrs-2.14/header-attrs.js"></script>
+<script src="site_libs/header-attrs-2.25/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/cosmo.min.css" rel="stylesheet" />
@@ -142,11 +142,15 @@ $(document).ready(function () {
     href = "index.html";
   var menuAnchor = $('a[href="' + href + '"]');
 
-  // mark it active
-  menuAnchor.tab('show');
-
-  // if it's got a parent navbar menu mark it active as well
-  menuAnchor.closest('li.dropdown').addClass('active');
+  // mark the anchor link active (and if it's in a dropdown, also mark that active)
+  var dropdown = menuAnchor.closest('li.dropdown');
+  if (window.bootstrap) { // Bootstrap 4+
+    menuAnchor.addClass('active');
+    dropdown.find('> .dropdown-toggle').addClass('active');
+  } else { // Bootstrap 3
+    menuAnchor.parent().addClass('active');
+    dropdown.addClass('active');
+  }
 
   // Navbar adjustments
   var navHeight = $(".navbar").first().height() + 15;
@@ -175,8 +179,8 @@ $(document).ready(function () {
   border-radius: 4px;
 }
 
-.tabset-dropdown > .nav-tabs > li.active:before {
-  content: "";
+.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "\e259";
   font-family: 'Glyphicons Halflings';
   display: inline-block;
   padding: 10px;
@@ -184,16 +188,9 @@ $(document).ready(function () {
 }
 
 .tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
-  content: "&#xe258;";
-  border: none;
-}
-
-.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
-  content: "";
+  content: "\e258";
   font-family: 'Glyphicons Halflings';
-  display: inline-block;
-  padding: 10px;
-  border-right: 1px solid #ddd;
+  border: none;
 }
 
 .tabset-dropdown > .nav-tabs > li.active {
@@ -279,12 +276,13 @@ $(document).ready(function () {
 
 
 <p>I am always interested in discussing potential collaborations and
-opportunities!</p>
+opportunities! Please don’t hesitate to reach out to me:</p>
 <div id="details" class="section level4">
 <h4><strong>Details:</strong></h4>
-<p>Email: <a href="mailto:nbarbour@umd.edu"
-class="email">nbarbour@umd.edu</a>, <a href="mailto:nbarbour@umces.edu"
-class="email">nbarbour@umces.edu</a></p>
+<p>Email: <a href="mailto:barbour@esf.edu"
+class="email">barbour@esf.edu</a>, <a
+href="mailto:nicole.ann.barbour@gmail.com"
+class="email">nicole.ann.barbour@gmail.com</a></p>
 </div>
 <div id="linked-in-link" class="section level4">
 <h4><strong>Linked In</strong>: <a
@@ -292,7 +290,7 @@ href="https://www.linkedin.com/in/nicole-barbour-970589168/">link</a></h4>
 </div>
 <div id="google-scholar-link" class="section level4">
 <h4><strong>Google Scholar</strong>: <a
-href="https://scholar.google.com/citations?user=RPzbOOgAAAAJ&amp;hl=en">link</a></h4>
+href="https://scholar.google.com/citations?hl=en&amp;view_op=list_works&amp;gmla=AILGF5Utw0EicoQoMgzBsR27eePMiXNf6WcSKs86zhiabB1Jo_5K54Kq2WsKEHl4RnLoqk3nVtd-Cks_4-6YGvBK2__7ZwHWqv6JNAK-9F30&amp;user=KU4LYHQAAAAJ">link</a></h4>
 </div>
 <div id="github-link" class="section level4">
 <h4><strong>GitHub</strong>: <a

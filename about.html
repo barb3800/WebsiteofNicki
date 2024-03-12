@@ -13,7 +13,7 @@
 
 <title>About Me</title>
 
-<script src="site_libs/header-attrs-2.14/header-attrs.js"></script>
+<script src="site_libs/header-attrs-2.25/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/cosmo.min.css" rel="stylesheet" />
@@ -142,11 +142,15 @@ $(document).ready(function () {
     href = "index.html";
   var menuAnchor = $('a[href="' + href + '"]');
 
-  // mark it active
-  menuAnchor.tab('show');
-
-  // if it's got a parent navbar menu mark it active as well
-  menuAnchor.closest('li.dropdown').addClass('active');
+  // mark the anchor link active (and if it's in a dropdown, also mark that active)
+  var dropdown = menuAnchor.closest('li.dropdown');
+  if (window.bootstrap) { // Bootstrap 4+
+    menuAnchor.addClass('active');
+    dropdown.find('> .dropdown-toggle').addClass('active');
+  } else { // Bootstrap 3
+    menuAnchor.parent().addClass('active');
+    dropdown.addClass('active');
+  }
 
   // Navbar adjustments
   var navHeight = $(".navbar").first().height() + 15;
@@ -175,8 +179,8 @@ $(document).ready(function () {
   border-radius: 4px;
 }
 
-.tabset-dropdown > .nav-tabs > li.active:before {
-  content: "";
+.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "\e259";
   font-family: 'Glyphicons Halflings';
   display: inline-block;
   padding: 10px;
@@ -184,16 +188,9 @@ $(document).ready(function () {
 }
 
 .tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
-  content: "&#xe258;";
-  border: none;
-}
-
-.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
-  content: "";
+  content: "\e258";
   font-family: 'Glyphicons Halflings';
-  display: inline-block;
-  padding: 10px;
-  border-right: 1px solid #ddd;
+  border: none;
 }
 
 .tabset-dropdown > .nav-tabs > li.active {
@@ -281,36 +278,31 @@ $(document).ready(function () {
 <p><img src="Pacuare_NB.jpg" style="width:50.0%" /></p>
 <div id="nicole-barbour" class="section level1">
 <h1><strong>Nicole Barbour</strong></h1>
-<div id="ph.d.-candidate-in-ecological-systems" class="section level2">
-<h2><em>Ph.D. Candidate in Ecological Systems</em></h2>
+<div id="postdoctoral-researcher-movement-and-spatial-ecology"
+class="section level2">
+<h2><em>Postdoctoral Researcher, Movement and Spatial Ecology</em></h2>
 <p><font size= "4">(<strong>Full CV upon request</strong>)</font></p>
-<p><font size="4"> I am a movement and spatial ecologist and a 5th year
-Ph.D. candidate (graduation: Oct 2022) in the <strong>Bailey lab at the
-University of Maryland Center for Environmental Science</strong> (<a
-href="https://www.umces.edu/helen-bailey">link</a>) and the
-<strong>Fagan lab at the University of Maryland College Park</strong>
-(<a
-href="http://science.umd.edu/biology/faganlab/index.html">link</a>).</p>
-<p><font size="4"> I am interested in using quantitative and
+<p><font size="4"> I am currently a postdoctoral reseacher in the
+<strong>Gurarie lab at SUNY College of Environmental Science and
+Forestry</strong>(<a href="https://eligurarie.github.io/">link</a>). I
+work on <strong>The Fate of the Caribou</strong>(<a
+href="https://fateofthecaribou.github.io/">link</a>) research project,
+developing quantitative tools in R to understand the permeability of
+roads to migrating boreal woodland (<em>Rangifer tarandus caribou</em>)
+and barren-ground (<em>Rangifer tarandus groenlandicus</em>) caribou
+sub-species in the Northwest Territories, Canada. My recent Ph.D. work
+(University of Maryland, 2022) focused on understanding the movement
+ecology and behavior of various sea turtle species in South and Central
+America.</p>
+<p><font size="4"> I am broadly interested in using quantitative and
 interdisciplinary approaches to better understand the movement ecology
-and habitat use of species and inform “real life” management tools and
-policy.</p>
-<p><font size="4"> My dissertation has been focused on sea turtles
-(e.g. my first chapter, Barbour et al. 2020, and Degenford et al. 2020)
-but I also have applied my interests to other interesting systems,
-including an NSF-funded SESYNC project on offshore aquaculture (pub in
-review); the movement ecology and habitat use of Sonoran pronghorn (pub
-in prep); and ecolabeling for shellfish aquaculture (Gray et al. 2020).
-Of my three other dissertation chapters, two focus on developing
-quantitative tools for understanding multidimensional behavior and
-informing the dynamic management of migratory species- please see
-Upwell’s South Pacific TurtleWatch tool for an example of my recent work
-(<a href="https://www.upwell.org/sptw">link</a>).</p>
-<p><font size="4"> In addition to my dissertation research, I have a
-strong interest in teaching, citizen science, science outreach, and
-interdisciplinary collaborations that bridge social and natural
-sciences. See the “Projects and Research” tab for details on some of my
-recent collaborations and work. See the “Teaching” tab for details on my
+and habitat use of a variety of species to inform applied management
+tools and policy.</p>
+<p><font size="4"> In addition to research, I have a strong interest in
+teaching, citizen science, science outreach, and interdisciplinary
+collaborations that bridge social and natural sciences.</p>
+<p>See the “Projects and Research” tab for details on some of my recent
+collaborations and work. See the “Teaching” tab for details on my
 teaching experience. </font></p>
 </div>
 </div>

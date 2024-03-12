@@ -13,7 +13,7 @@
 
 <title>Projects and Research</title>
 
-<script src="site_libs/header-attrs-2.14/header-attrs.js"></script>
+<script src="site_libs/header-attrs-2.25/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/cosmo.min.css" rel="stylesheet" />
@@ -142,11 +142,15 @@ $(document).ready(function () {
     href = "index.html";
   var menuAnchor = $('a[href="' + href + '"]');
 
-  // mark it active
-  menuAnchor.tab('show');
-
-  // if it's got a parent navbar menu mark it active as well
-  menuAnchor.closest('li.dropdown').addClass('active');
+  // mark the anchor link active (and if it's in a dropdown, also mark that active)
+  var dropdown = menuAnchor.closest('li.dropdown');
+  if (window.bootstrap) { // Bootstrap 4+
+    menuAnchor.addClass('active');
+    dropdown.find('> .dropdown-toggle').addClass('active');
+  } else { // Bootstrap 3
+    menuAnchor.parent().addClass('active');
+    dropdown.addClass('active');
+  }
 
   // Navbar adjustments
   var navHeight = $(".navbar").first().height() + 15;
@@ -175,8 +179,8 @@ $(document).ready(function () {
   border-radius: 4px;
 }
 
-.tabset-dropdown > .nav-tabs > li.active:before {
-  content: "";
+.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "\e259";
   font-family: 'Glyphicons Halflings';
   display: inline-block;
   padding: 10px;
@@ -184,16 +188,9 @@ $(document).ready(function () {
 }
 
 .tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
-  content: "&#xe258;";
-  border: none;
-}
-
-.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
-  content: "";
+  content: "\e258";
   font-family: 'Glyphicons Halflings';
-  display: inline-block;
-  padding: 10px;
-  border-right: 1px solid #ddd;
+  border: none;
 }
 
 .tabset-dropdown > .nav-tabs > li.active {
@@ -279,153 +276,251 @@ $(document).ready(function () {
 
 
 <div
-id="below-is-a-list-of-the-research-and-education-projects-i-am-currently-or-have-recently-been-working-on-including-my-dissertation-research-and-external-appointments."
+id="below-are-some-recent-projects-of-mine-including-my-dissertation-work-and-external-projects."
 class="section level3">
-<h3><em>Below is a list of the research and education projects I am
-currently or have recently been working on, including my dissertation
-research and external appointments.</em></h3>
+<h3><em>Below are some recent projects of mine, including my
+dissertation work and external projects.</em></h3>
 <p><br></p>
 </div>
 <div
-id="dissertation-research-at-the-university-of-maryland-movement-and-spatial-ecology-of-sea-turtles-in-the-pacific-and-atlantic-oceans"
+id="postdoctoral-research-suny-college-of-environmental-science-and-forestry-quantifying-road-permeability-for-migratory-caribou-paper-in-prep"
 class="section level3">
-<h3><strong>Dissertation Research at the University of Maryland:
-Movement and Spatial Ecology of Sea Turtles in the Pacific and Atlantic
-Oceans</strong></h3>
-<p>Link to <strong>Upwell Turtles</strong> website, my collaborator and
-funder: <a href="https://www.upwell.org/">link</a></p>
-<p><img src="tracking.PNG" style="width:50.0%" /> <br> <img
-src="Leatherback.PNG" style="width:50.0%" /></p>
-<ul>
-<li><h5
-id="chapter-1-published-environmental-and-biological-factors-influencing-dispersal-of-neonate-leatherback-turtles-from-an-endangered-costa-rican-nesting-population.">Chapter
-1 (<strong>published</strong>): <em>Environmental and Biological Factors
-Influencing Dispersal of Neonate Leatherback Turtles from an Endangered
-Costa Rican Nesting Population</em>.</h5>
-This chapter used a combination of empirical biologging methods and
-quantitative models (first passage time, random walk models, generalized
-additive mixed models) to characterize the movements and dispersal
-trajectories for acoustically tracked, neonate leatherback sea turtles
-(2016, 2018) in Pacuare, Costa Rica. Results showed that despite a
-constant mean swimming speed across individuals, in fast ocean current
-conditions, individual neonates demonstrated behavioral variability in
-their swimming responses. These results have application for future
-biologging studies for this vulnerable life stage in different species
-and inform conservation efforts for this endangered subpopulation in the
-Atlantic. <br></li>
-<li><h5
-id="chapter-2-in-progress-the-influence-of-age-class-ocean-currents-and-habitat-on-juvenile-dispersal-of-the-caribbean-green-sea-turtle.">Chapter
-2 (<strong>in progress</strong>): <em>The Influence of Age Class, Ocean
-Currents, and Habitat on Juvenile Dispersal of the Caribbean Green Sea
-Turtle</em>.</h5>
-This research is ongoing, in collaboration with the Cayman Turtle Centre
-(<a href="https://www.turtle.ky/">link</a>) and Upwell (<a
-href="https://www.upwell.org/news/2022/2/23/update-from-the-field-juvenile-green-sea-turtle-tagging-in-the-cayman-islands">link</a>).
-In January (2022), we deployed novel miniature satellite tags on three
-age classes of captive-reared, juvenile green sea turtles in the Cayman
-Islands. Preliminary results from this work show that ocean currents are
-the primary drivers of dispersal and trajectory variability,
-irrespective of other habitat variables and age class. An additional age
-class will be tagged and released in July (2022) and we expect these
-results to not only be informative for understanding early dispersal of
-sea turtles but also has implications for future conservation efforts,
-including headstarting programs. <br></li>
-<li><h5
-id="chapter-3-in-review-using-machine-learning-approaches-to-classify-vertical-movement-profiles-and-behavior-.">Chapter
-3 (<strong>in review</strong>): <em>Using Machine Learning Approaches to
-Classify Vertical Movement Profiles and Behavior </em>.</h5>
-This research utilized dive profiles from a previously published large
-dataset of female leatherback migratory movements in the Eastern Pacific
-(see Shillinger et al. 2008, PLoS Biology) to develop novel methods of
-vertical behavior classification. A dynamic time warp (DTW) clustering
-analysis in combination with Generalized Additive Mixed Models (GAMMs)
-was used to identify two ecologically significant dive types for this
-population. An additional machine learning analysis using a
-convolutional neural network (CNN) model allowed us to further classify
-dive profiles within each of these dive types by their unique shape.
-This work has application for other species with vertical movement
-behaviors (e.g., flying, arboreal, aquatic species). Upon publication,
-an online tool will be published that will allow users to upload images
-of their own sea turtles dive profiles and use our CNN to classify these
-by standard dive shape.<br />
-<br></li>
-<li><h5
-id="chapter-4-submitted-incorporating-multidimensional-behavior-into-a-dynamic-management-tool-for-a-critically-endangered-and-migratory-species.">Chapter
-4 (<strong>submitted</strong>): <em>Incorporating multidimensional
-behavior into a dynamic management tool for a critically endangered and
-migratory species</em>.</h5>
-This research builds on the work of Chapter 3, using the same dataset of
-migratory female leatherback tracks (Shillinger et al. 2008) and
-annotating daily locations of each individual by their proportion of
-each dive type from the DTW analysis. Annotated tracks were used in
-combination with fishing effort data (Global Fishing Watch,<a
-href="https://globalfishingwatch.org/">link</a>) and 3D Utilization
-Dsitributions (UDs) to create a method for integrating multidimensional
-behavior and space use with threat data to produce a Dynamic Management
-(DM) tool. The results of this work are being added to South Pacific
-TurtleWatch (<a href="https://www.upwell.org/sptw">link</a>), an
-existing DM tool for the Eastern Pacific population of leatherbacks. To
-determine multidimensional behaviors, We developed a new Hidden Markov
-Model (HMM) in Stan language (<a href="https://mc-stan.org/"
-class="uri">https://mc-stan.org/</a>) and with an R interface that
-efficiently predicted 3 hidden states of movement for this population
-that differ in their horizontal/vertical movement parameters and
-spatial-temporal distribution. Upon publication, our methods, example
-code, and example data will become available as a public repository on
-GitHub.</li>
-</ul>
+<h3><strong>Postdoctoral Research (SUNY College of Environmental Science
+and Forestry): Quantifying Road Permeability for Migratory Caribou
+(Paper in Prep)</strong></h3>
+<p><img src="FateoftheCaribou.PNG" style="width:50.0%" /></p>
+<p>Currently, through the <a
+href="https://fateofthecaribou.github.io/">Fate of the Caribou
+Project</a> and a contracted partnership with the Government of the
+Northwest Territories, I am working to develop and apply a tool for
+quantifying how strong of a deterrent linear barriers (e.g., roads) are
+to migratory species, such as boreal (<em>Rangifer tarandus
+caribou</em>) and barren-ground (<em>Rangifer tarandus
+groenlandicus</em>) caribou in the Northwest Territories (NWT). Caribou
+in this region are considered “threatened” under the NWT Species at Risk
+Act and are known to encounter and avoid roads, which experience
+variable traffic and deter animal crossings during their dispersal.</p>
+<p>I am developing an R package centered on this issue (Barbour et al.,
+<em>in prep</em>), where users will be able to use package functions
+with biotelemetry data and spatial features of barriers to get an index
+of permeability for any given linear barrier that is impacting a mobile
+species of interest.</p>
 <p><br></p>
 </div>
 <div
-id="department-of-defense-student-contractor-position-understanding-and-predicting-endangered-sonoran-pronghorn-habitat-use-and-temoral-patterns-on-military-bombing-manuscript-in-prep"
+id="external-research-u.s.-department-of-defense-movement-and-survival-of-endangered-sonoran-pronghorn-in-a-managed-rangeland-paper-in-prep"
 class="section level3">
-<h3><strong>Department of Defense Student Contractor Position:
-Understanding and Predicting Endangered Sonoran Pronghorn Habitat Use
-and Temoral Patterns on Military Bombing</strong> (<em>manuscript in
-prep</em>)</h3>
-<p><img src="Pronghorn.PNG" style="width:75.0%" /></p>
-<p>This project uses a massive and long-running dataset of both
-observational and radio-collared data of endangered Sonoran pronhorn to
-understand their movement ecology and spatial-temporal use of the Barry
-M. Goldwater Range (BMGR) in Arizona (for information, <a
-href="https://www.aetc.af.mil/News/Article-Display/Article/261238/sonoran-pronghorn-continue-to-thrive/">link</a>).
-A mixture of methods are used for this, including survival curves,
-continuous time movement models and individual area-corrected
-autocorrelated kernel density estimates of home ranges (see the CTMM R
-package, <a href="https://cran.r-project.org/web/packages/ctmm/ctmm.pdf"
-class="uri">https://cran.r-project.org/web/packages/ctmm/ctmm.pdf</a>),
-resource selection functions (RSFs), group size and composition
-generalized additive models (GAMs), and behavioral change point analyses
-(see the bcpa R package, <a
-href="https://cran.r-project.org/web/packages/bcpa/vignettes/bcpa.pdf"
-class="uri">https://cran.r-project.org/web/packages/bcpa/vignettes/bcpa.pdf</a>).</p>
+<h3><strong>External Research (U.S. Department of Defense): Movement and
+Survival of Endangered Sonoran Pronghorn in a Managed Rangeland (Paper
+in Prep)</strong></h3>
+<p><img src="PronghornSurvival.PNG" style="width:75.0%" /></p>
+<p>This project used a massive and long-running dataset of both
+observational and radio-collared data of endangered Sonoran pronhorn
+(<em>Antilocapra americana sonoriensis</em>) to understand their
+survival and movement ecology within the Barry M. Goldwater Range (BMGR)
+in Arizona (for information, <a
+href="https://www.aetc.af.mil/News/Article-Display/Article/261238/sonoran-pronghorn-continue-to-thrive/">link</a>).</p>
+<p>This subspecies of pronghorn has been in recovery since near
+extinction in the early 2000’s and has experienced a variety of
+management efforts (including captive-born releases to boost survival of
+endangered herds). My research used a variety of quantitative methods
+(including continuous time movement models, area-corrected home ranges,
+behavioral change point analyses, generalized additive models, and
+periodic hazard functions) with pronghorn biotelemetry data to
+characterize their movement ecology, survival, and temporal occurrence
+near anthropogenically disturbed areas.</p>
+<p>Results support that active management efforts have been successful
+in increasing survival, with pronghorn in this region having strong
+seasonal trends in home range sizes, movement rates, group composition,
+and proximity to military disturbance sites.</p>
+<p>These findings have immediate relevance to current pronghorn
+conservation initiatives and the comprehensive analysis used is
+additionally highly applicable to other mobile species in actively
+disturbed or resource-limited landscapes.</p>
 <p><br></p>
 </div>
 <div
-id="nsf-and-sesync-graduate-pursuit-assessing-socio-environmental-suitability-and-social-license-of-proposed-offshore-aquaculture-development-a-florida-case-study-manuscript-submitted"
+id="external-research-nsf-funded-sesync-fellowship-assessing-socio-environmental-suitability-and-social-license-of-proposed-offshore-aquaculture-development-a-florida-case-study-published"
 class="section level3">
-<h3><strong>NSF and SESYNC Graduate Pursuit: Assessing
+<h3><strong>External Research (NSF-Funded SESYNC Fellowship): Assessing
 Socio-Environmental Suitability and Social License of Proposed Offshore
-Aquaculture Development: A Florida Case Study</strong> (<em>manuscript
-submitted</em>)</h3>
-<p><img src="OA_pic.PNG" style="width:75.0%" /></p>
-<p>This work stemmed from an interdisplinary collaboration of graduate
+Aquaculture Development: A Florida Case Study (Published)</strong></h3>
+<p>Paper available at: <a
+href="https://onlinelibrary.wiley.com/doi/10.1111/jwas.13031">Guthrie et
+al 2023, Journal of the World Aquaculture Society</a></p>
+<p><img src="SuitabilityMap.PNG" style="width:50.0%" /></p>
+<p>This work stemmed from an interdisciplinary collaboration of graduate
 women scientists from around the U.S. (including myself), with the aim
 of producing a dynamic framework to inform the development of offshore
-aquaculture in the U.S. Our approach utilized a combination of
-biological, social, and community publically-available data to assess
-community concerns, socioeconomic vulnerability, and socio-ecological
-feasibility of offshore aquaculture development. Our methods included
-mapping publicly available data for relevant social, ecological, and
-technical factors and analyzing public comments and media articles. As a
-timely and relevant case study, we applied these methods to a recent
-proposed federal permit for a pilot finfish farm project off the Florida
-Gulf coast (for information, <a
+aquaculture in the U.S.</p>
+<p>Our approach utilized a combination of biological, social, and
+community publically-available data to assess community concerns,
+socioeconomic vulnerability, and socio-ecological feasibility of
+offshore aquaculture development.</p>
+<p>As part of our approach to determining technical suitability of
+offshore aquaculture in the Gulf of Mexico, I performed a suitability
+analysis to identify available areas of development for two different
+finfish species, red drum (<em>Sciaenops ocellatus</em>) and almaco jack
+(<em>Seriola rivoliana</em>). Results showed large areas of the Gulf to
+be suitable for both species, but with potential for spatial conflict
+with relevant communities in coastal and nearshore areas.</p>
+<p>These results were integrated with other public data, including
+public comments, media articles, and socio-environmental vulnerability
+indices, to inform the impact of a recent proposed federal permit for a
+pilot finfish farm project off the Florida Gulf coast (for information,
+<a
 href="http://ocean-era.com/blog/2017/11/2/velella-epsilon-pioneering-offshore-aquaculture-in-the-gulf-of-mexico">link</a>)
-and for two viable finfish species for this region, red drum (Sciaenops
-ocellatus) and almaco jack (Seriola rivoliana). This work exemplifies
-how socio-environmental synthesis and data can be used to inform
-relevant social issues.</p>
+on adjacent communities.</p>
+<p><br></p>
+</div>
+<div
+id="dissertation-research-university-of-maryland-clustering-and-classification-of-vertical-movement-profiles-for-ecological-inference-of-behavior-published"
+class="section level3">
+<h3><strong>Dissertation Research (University of Maryland): Clustering
+and classification of vertical movement profiles for ecological
+inference of behavior (Published)</strong></h3>
+<p>Paper Available At: <a
+href="https://esajournals.onlinelibrary.wiley.com/doi/full/10.1002/ecs2.4384">Barbour
+et al 2023, Ecosphere</a></p>
+<p>Dive Classification Tool: <a
+href="https://barb3800.github.io/TurtleDiveClassificationTool/">Weblink</a></p>
+<p><img src="DiveShapes.PNG" style="width:40.0%" /></p>
+<p>I worked in collaboration with other scientists specializing in
+machine learning with this paper to develop a Convolutional Neural
+Network (CNN) model to classify sea turtle dive profiles by their shape,
+an effort that previously has mostly been done by hand. We applied this
+model to a large dataset of migratory dive profiles for Eastern Pacific
+leatherback turtles (<em>Dermochelys coriacea</em>).</p>
+<p>I then used dynamic time warp clustering (DTW) to further group
+classified dives by their similarity in metrics (dive depth and
+duration), resulting in two larger categories of dives that differed in
+their dive metrics and proportion of different shapes. Generalized
+additive mixed models were further used to determine the ecological
+significance of these two dive types for leatherback turtles in the
+Eastern Pacific.</p>
+<p>This work represents a novel approach to classifying and determining
+ecological significance of vertical movements and has potential to be
+applied to other species with vertical movements (e.g., aerial).
+Further, our CNN tool is published online as a broadly applicable tool
+for classifying images of sea turtle dives!</p>
+<p><br></p>
+</div>
+<div
+id="dissertation-research-university-of-maryland-incorporating-multidimensional-behavior-into-a-risk-management-tool-for-a-critically-endangered-and-migratory-species-published"
+class="section level3">
+<h3><strong>Dissertation Research (University of Maryland):
+Incorporating multidimensional behavior into a risk management tool for
+a critically endangered and migratory species (Published)</strong></h3>
+<p>Paper Available At: <a
+href="https://conbio.onlinelibrary.wiley.com/doi/full/10.1111/cobi.14114">Barbour
+et al 2023, Conservation Biology</a></p>
+<p>South Pacific TurtleWatch, Dynamic Mapping Tool: <a
+href="https://www.upwell.org/sptw">Weblink</a></p>
+<p><img src="DMmaps.PNG" style="width:75.0%" /></p>
+<p>In this collaborative paper, I worked with the non-profit
+organization, <a href="ww.upwell.org">Upwell</a>, to produce a dynamic
+mapping product to inform where and when Eastern Pacific leatherback
+turtles (<em>Dermochelys coriacea</em>) are most at risk of interacting
+with various fishing gear types when performing different (vertical and
+horizontal) movement behaviors. This product has been incorporated into
+South Pacific Turtle Watch, an online dynamic management tool for
+Eastern Pacific leatherbacks.</p>
+<p>I used a variety of quantitative methods to create our dynamic
+mapping product, including developing a Hidden Markov model in Stan and
+R that allowed us to identify distinct modes of behavior, using both
+horizontal (swimming speed and turning angle) and vertical (proportion
+of different dive types, see <a
+href="(https://esajournals.onlinelibrary.wiley.com/doi/full/10.1002/ecs2.4384)">Barbour
+et al 2023</a> variables. These behavioral predictions were combined
+with monthly surfaces of fishing effort data for various fishing gears
+and sea turtle kernel density to produce monthly predictive surfaces of
+where leatherbacks in distinct behavioral modes have the highest
+interaction risk with different fishing gears.</p>
+<p>These dynamic maps are currently available online with Upwell’s South
+Pacific TurtleWatch tool and will be distributed to stakeholders for
+conservation and management of Eastern Pacific leatherbacks during their
+migration.</p>
+<p><br></p>
+</div>
+<div
+id="dissertation-research-university-of-maryland-satellite-tracking-of-head-started-juvenile-green-turtles-chelonia-mydas-reveals-release-effects-and-an-ontogenetic-shift-published"
+class="section level3">
+<h3><strong>Dissertation Research (University of Maryland): Satellite
+Tracking of Head-Started Juvenile Green Turtles (Chelonia mydas) Reveals
+Release Effects and an Ontogenetic Shift (Published)</strong></h3>
+<p>Paper Available At: <a
+href="https://www.mdpi.com/2076-2615/13/7/1218">Barbour et al 2023,
+Animals</a></p>
+<p><img src="CaymanTracks.PNG" style="width:40.0%" /></p>
+<p>With this research, I collaborated with the non-profit organization,
+<a href="ww.upwell.org">Upwell</a>, as well as researchers at <a
+href="https://biology.fau.edu/marine-lab/">Florida Atlantic
+University</a>, to deploy novel miniature satellite tags on captive-born
+juvenile green turtles (<em>Chelonia mydas</em>) in the Cayman
+Islands.</p>
+<p>We partnered with the <a href="https://www.turtle.ky/">Cayman Turtle
+Conservation and Education Centre</a> to obtain captive-born, juvenile
+turtles of various age classes (1-4 years), releasing them from two
+different sites off of Grand Cayman.</p>
+<p>I performed a variety of quantitative analyses to determine what was
+driving differences in dispersal, including comparisons of turtle
+directional headings with ocean currents and generalized additive mixed
+models of turtle swimming persistence as a function of various potential
+drivers.</p>
+<p>I found that turtle trajectories were largely affected by differences
+in spatial-temporal current structure but also demonstrated positive
+potential for recruitment to known developmental and foraging areas for
+green turtles in surrounding coastal areas. These are encouraging
+results for the conservation of green turtles in the Cayman Islands, a
+recovering population.</p>
+<p><br></p>
+</div>
+<div
+id="dissertation-research-university-of-maryland-environmental-and-biological-factors-influencing-dispersal-of-neonate-leatherback-turtles-from-an-endangered-costa-rican-nesting-population-published"
+class="section level3">
+<h3><strong>Dissertation Research (University of Maryland):
+Environmental and Biological Factors Influencing Dispersal of Neonate
+Leatherback Turtles from an Endangered Costa Rican Nesting Population
+(Published)</strong></h3>
+<p>Paper Available At: <a
+href="https://www.frontiersin.org/articles/10.3389/fmars.2020.582933/full">Barbour
+et al 2020, Frontiers in Marine Science</a></p>
+<p><img src="NeonateResponse.PNG" style="width:50.0%" /></p>
+<p>In this research, I worked in collaboration with the non-profit
+organization, <a href="ww.upwell.org">Upwell</a>, and the <a
+href="https://www.pacuarereserve.org/">Ecology Project
+International/Pacuare Reserve</a> to tag neonate Caribbean leatherback
+(<em>Dermochelys coriacea</em>) with acoustic tags and release them in
+nearshore areas of Pacuare, Costa Rica. We also simultaneously released
+ocean drifters, to measure fine-scale current directions and speeds.</p>
+<p>Using a combination of quantitative models (first passage time,
+random walk models, generalized additive mixed models), I characterized
+the environmental drivers of variability in neonate dispersal
+trajectories.</p>
+<p>Results showed that despite a constant mean swimming speed across
+individuals, in fast ocean current conditions, individual neonates
+demonstrated behavioral variability in their swimming responses. This
+study overall informs conservation efforts for this endangered
+subpopulation in the Atlantic, including future releases of neonates and
+potential headstarting efforts to boost population numbers.</p>
+<p><br></p>
+</div>
+<div
+id="external-research-university-of-maryland-center-for-environmental-science-ecolabels-can-improve-public-perception-and-farm-profits-for-shellfish-aquaculture-published"
+class="section level3">
+<h3><strong>External Research (University of Maryland Center for
+Environmental Science): Ecolabels Can Improve Public Perception and Farm
+Profits for Shellfish Aquaculture (published)</strong></h3>
+<p>Paper Available At: <a
+href="https://www.int-res.com/abstracts/aei/v13/p13-20">Gray et al 2021,
+Aquaculture Environment Interactions</a></p>
+<p><img src="ecolabels.PNG" style="width:75.0%" /></p>
+<p>This project was a collaboration at the University of Maryland Center
+for Environmental Science (UMCES).</p>
+<p>We created an opinion piece on the importance of ecolabeling for
+shellfish, which have not had the extensive labeling and public
+awareness of ecosystem services that other marketed seafood products
+have.</p>
 <p><br></p>
 </div>
 <div id="plastic-pollution-outreach-and-education-projects"
@@ -434,75 +529,42 @@ class="section level3">
 Projects</strong></h3>
 <p><img src="umces_outreach.png" style="width:50.0%" /></p>
 <ul>
-<li><h5 id="wave-of-plastic"><em>Wave of Plastic</em>:</h5>
-This is a project sponsored by NOAA Bay Watershed Education and Training
-(B-WET) that developed and provides a middle-school curricular unit on
-issues, characteristics, and impacts of plastic pollution. I edited the
-lesson curricula for this project and created website and social media
-material.</li>
+<li><h5 id="wave-of-plastic"><em>Wave of Plastic</em>:</h5></li>
 </ul>
-<p><strong>Website Link</strong>: <a
-href="https://www.umces.edu/waveofplastic">Link</a></p>
+<p><strong>Wave of Plastic Website</strong>: <a
+href="https://www.umces.edu/waveofplastic">Weblink</a></p>
+<p>This was a project sponsored by NOAA Bay Watershed Education and
+Training (B-WET) that developed and provided middle-school curricular
+units on issues, characteristics, and impacts of plastic pollution.</p>
+<p>I edited the lesson curricula for this project and created website
+and social media material.</p>
 <ul>
-<li><h5 id="plastic-watch"><em>Plastic Watch</em>:</h5>
-This project was sponsored by NOAA and Maryland DNR to partner with
+<li><h5 id="plastic-watch"><em>Plastic Watch</em>:</h5></li>
+</ul>
+<p><strong>Plastic Watch Website</strong>: <a
+href="https://www.umces.edu/PlasticWatch">Weblink</a></p>
+<p>This project was sponsored by NOAA and Maryland DNR to partner with
 local restaurants in Solomons, MD, to create a framework to help these
 businesses reduce their plastic waste while prioritizing their business
-and expenditures. These efforts were complimented by outreach and
-education efforts in the local community. My role on this project was
-the lead assistant and outreach coordinator and I created website and
-social media content, interviewed our business partners, conducted the
-final cost and usage analysis, drafted the final report, and found,
-distributed, and budgeted biodegradable products to replace
-unsustainable plastic products for these businesses.</li>
-</ul>
-<p><strong>Website Link</strong>: <a
-href="https://www.umces.edu/PlasticWatch">Link</a></p>
+and expenditures.</p>
+<p>These efforts were complimented by outreach and education efforts in
+the local community. My role on this project was the lead assistant and
+outreach coordinator and I created website and social media content,
+interviewed our business partners, conducted the final cost and usage
+analysis, drafted the final report, and found, distributed, and budgeted
+biodegradable products to replace unsustainable plastic products for
+these businesses.</p>
 <p><br></p>
-</div>
-<div
-id="university-of-maryland-graduate-student-government-and-sustainability-council-representative"
-class="section level3">
-<h3><strong>University of Maryland Graduate Student Government and
-Sustainability Council Representative</strong></h3>
-<p><img src="sustainability_council.PNG" style="width:50.0%" /></p>
-<p>I served as a representative for the University of Maryland Graduate
-Student Government (<a href="https://www.gsgumd.org/">link</a>) on both
-the Local and Civic Engagement Committee and the University
-Sustainability Council (<a
-href="https://sustainability.umd.edu/about/sustainability-council">link</a>).
-With these roles, I was able to represent my constituents in the MEES
-(Marine-Estuarine Environmental Sciences) program at the University
-government level and engage both graduate students and local communities
-with local and civic affairs and actions. As the graduate Sustainability
-Council Representative for the University of Maryland, I was able to
-assist the University in carrying out its Climate Action Plan (for
-information, <a
-href="https://sustainingprogress.umd.edu/progress-commitments/climate-action-plan">Link</a>).</p>
-<p><br></p>
-</div>
-<div
-id="using-ecolabeling-to-improve-crop-profiles-public-perception-and-farm-profits-for-shellfish-aquaculture-published"
-class="section level3">
-<h3><strong>Using Ecolabeling to Improve Crop Profiles, Public
-Perception, and Farm Profits for Shellfish Aquaculture</strong>
-(<em>published</em>)</h3>
-<p><img src="ecolabels.PNG" style="width:75.0%" /></p>
-<p>This project was a collaboration at the University of Maryland Center
-for Environmental Science (UMCES). We created an opinion piece on the
-importance of ecolabeling for shellfish, which have not had the
-extensive labeling and public awareness of ecosystem services that other
-marketed seafood products have.</p>
 </div>
 <div id="other-collaborations-and-work" class="section level3">
 <h3><strong>Other Collaborations and Work</strong></h3>
 <p>In addition to those above, I have worked with the following
 organizations in STEM education and public outreach. I am always looking
 for new opportunities!</p>
-<p><img src="NStutoring.PNG" style="width:50.0%" /> <img src="500WS.jpg"
-style="width:50.0%" /></p>
-<p><img src="skypeascientist.PNG" style="width:50.0%" /> <img
-src="500qs.PNG" style="width:50.0%" /></p>
+<p><img src="NStutoring.PNG" style="width:30.0%" /> <img src="500WS.jpg"
+style="width:30.0%" /></p>
+<p><img src="skypeascientist.PNG" style="width:30.0%" /> <img
+src="500qs.PNG" style="width:30.0%" /></p>
 <ul>
 <li><h5
 id="northstar-tutoring-websitelink-tutoring-and-mentorship-services-for-k-12-students-from-underrepresented-communities">Northstar

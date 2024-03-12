@@ -9,14 +9,15 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 
-I am always interested in discussing potential collaborations and opportunities! 
+I am always interested in discussing potential collaborations and opportunities!
+Please don't hesitate to reach out to me:
 
 #### **Details:** 
-Email: <nbarbour@umd.edu>, 
-<nbarbour@umces.edu>
+Email: <barbour@esf.edu>, 
+<nicole.ann.barbour@gmail.com>
 
 #### **Linked In**: [link](https://www.linkedin.com/in/nicole-barbour-970589168/)
-#### **Google Scholar**: [link](https://scholar.google.com/citations?user=RPzbOOgAAAAJ&hl=en)
+#### **Google Scholar**: [link](https://scholar.google.com/citations?hl=en&view_op=list_works&gmla=AILGF5Utw0EicoQoMgzBsR27eePMiXNf6WcSKs86zhiabB1Jo_5K54Kq2WsKEHl4RnLoqk3nVtd-Cks_4-6YGvBK2__7ZwHWqv6JNAK-9F30&user=KU4LYHQAAAAJ)
 #### **GitHub**: [link](https://github.com/barb3800)
 
 

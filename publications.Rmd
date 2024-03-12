@@ -6,35 +6,35 @@ output: html_document
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
-![](turkey_vulture_presentation.png){width=75%}
+![](turkey_vulture_presentation.png){width=50%}
 
 ## Publications 
 
-**Barbour N**, Shillinger GL, Gurarie ED, Hoover AL, Gaspar P, Temple-Boyer J, Candela T, Fagan WF, and Bailey H (*in prep*) Incorporating multidimensional behavior into a dynamic management tool for a critically endangered and migratory species. Journal: Conservation Biology
+**Barbour N**, Kelly A, and Gurarie ED (in prep). *The “permeability” R package: A maximum-likelihood based tool to quantify the permeability of linear barriers to animal movement*. Intended Journal: Methods in Ecology and Evolution
 
-Guthrie A^, **Barbour N^**, Cannon S^, Marriott SE^, Racine P^, Young R^, Bae A, Lester SE, Michaelis A (*in review*) A socio-environmental framework for identifying gaps between among proposed offshore aquaculture development, public perception, and local communities: a Florida case study. Journal: PlosOne ^indicates equal first author status
+**Barbour N**, Bright J, …, Fleming CH, and Fagan WF (in prep). *Post-captivity effects and seasonal variability in Sonoran pronghorn (Antilocapra americana sonoriensis) survival, home ranges, and behavior*. Intended Journal: Journal of Wildlife Management 
 
-**Barbour N**, Robillard AJ, Shillinger GL, Lyubchich V, Secor DH, Fagan WF, Bailey H (*in review*) Using machine learning approaches to classify vertical movement profiles and behavior. Journal: Ecosphere
+Candela T,... **Barbour N**,... Casella F, and Shillinger GL (2024). *Novel microsatellite tags hold promise for illuminating the Lost Years in four sea turtle species*. Journal: Animals. Weblink: *TBD* 
 
-**Barbour N**, Shillinger GL, Hoover HL, Williamson SA, Coles VJ, Liang D, Fagan WF, Bailey H. (2020) Environmental and biological factors influencing dispersal of neonate leatherback turtles (*Dermochelys coriacea*) from an endangered Costa Rican nesting population. Journal: Frontiers in Marine Science
+**Barbour N**, Shillinger GL, …, Fagan WF, and Bailey H (2023). *Incorporating multidimensional behavior into a risk management tool for a critically endangered and migratory species*. Journal: Conservation Biology. [Weblink](https://conbio.onlinelibrary.wiley.com/doi/full/10.1111/cobi.14114)
 
-*Link to Published Article*: [link](https://www.frontiersin.org/articles/10.3389/fmars.2020.582933/full?&utm_source=Email_to_authors_&utm_medium=Email&utm_content=T1_11.5e1_author&utm_campaign=Email_publication&field=&journalName=Frontiers_in_Marine_Science&id=582933)
-<br>
+Guthrie A^, **Barbour N**^, Cannon S^, Marriott SE^, Racine P^, Young R^, …, Michaelis A (2023). *A socio-environmental framework for identifying gaps between among proposed offshore aquaculture development, public perception, and local communities: a Florida case study*. Journal: Journal of the World Aquaculture Society [Weblink](https://onlinelibrary.wiley.com/doi/full/10.1111/jwas.13031) ^indicates equal first author status
 
-Degenford, HJ, Liang D, Bailey H, Hoover AL, … **Barbour N**, Shillinger GL  Using fisheries observation data to develop a predictive species distribution model for endangered sea turtles. Journal: Conservation Science and Practice
+**Barbour N**, Bailey H, Shillinger GL, Candela T, Gaspar P, … and Fagan WF (2023). *Satellite tracking of head-started juvenile green turtles (Chelonia mydas) reveals release effects and an ontogenetic shift*. Journal: Animals [Weblink](https://www.mdpi.com/2076-2615/13/7/1218)
 
-*Link to Published Article*: [link](https://conbio.onlinelibrary.wiley.com/doi/full/10.1111/csp2.349)
-<br>
+**Barbour N**, Robillard AJ, Shillinger GL, Lyubchich V, Secor DH, Fagan WF, Bailey H (2023). *Clustering and classification of vertical movement profiles for ecological inference of behavior*. Journal: Ecosphere [Weblink](https://esajournals.onlinelibrary.wiley.com/doi/full/10.1002/ecs2.4384)
 
-Gray M, **Barbour N**, Campbell B, Robillard AJ, Todd-Rodriguez A, Xiao H, Plough L (2021) Ecolabels can improve public perception and farm profits for shellfish aquaculture. Journal: Aquaculture Environment Interactions 
+**Barbour N**, Shillinger GL, …., Bailey H (2020). *Environmental and biological factors influencing dispersal of neonate leatherback turtles (Dermochelys coriacea) from an endangered Costa Rican nesting population*. Journal: Frontiers in Marine Science [Weblink](https://www.frontiersin.org/articles/10.3389/fmars.2020.582933/full)
 
-*Link to Published Article*: [link](https://archive.hshsl.umaryland.edu/handle/10713/15158)
+Degenford, HJ, Liang D, Bailey H, Hoover AL, … *Barbour N*, Shillinger GL (2020). *Using fisheries observation data to develop a predictive species distribution model for endangered sea turtles*. Journal: Conservation Science and Practice [Weblink](https://conbio.onlinelibrary.wiley.com/doi/full/10.1111/csp2.349)
 
-<br>
+Gray M, **Barbour N**, Campbell B, Robillard AJ, Todd-Rodriguez A, Xiao H, Plough L (2020). *Ecolabels can improve public perception and farm profits for shellfish aquaculture*. Journal: Aquaculture Environment Interactions [Weblink](https://www.int-res.com/abstracts/aei/v13/p13-20)
 
 <br>
 
 ## Recent Presentations
+
+**Barbour N**, et al. (*oral presentation*). Seasonal patterns in Sonoran pronghorn (*Antilocapra americana sonoriensis*) survival, home ranges, and movement within a managed rangeland. Invited Speaker, Adaptive Peaks, SUNY ESF 2023.
 
 **Barbour N**, (*oral presentation*). Incorporating Multidimensional Behavior into Dynamic Management. Guest Lecturer, Upwell Roundtable 2022.
 
@@ -46,7 +46,7 @@ Gray M, **Barbour N**, Campbell B, Robillard AJ, Todd-Rodriguez A, Xiao H, Ploug
 
 **Barbour N**. (*oral presentation*). Introduction to Marine Mammals. Guest Lecturer: University of Maryland, Mammalogy, 2021. 
 
-**Barbour N**, Bailey H, Hoover HL, Ashley N, Williamson SA, Shillinger GL (*oral presentation*). Environmental and biological drivers of endangered leatherback hatchling (*Dermochelys coriacea*) early dispersal from an endangered Costa Rican nesting population. Conference: Ocean Sciences Meeting 2020. 
+**Barbour N**, et al. (*oral presentation*). Environmental and biological drivers of endangered leatherback hatchling (*Dermochelys coriacea*) early dispersal from an endangered Costa Rican nesting population. Conference: Ocean Sciences Meeting 2020. 
 
 **Barbour N**. (*oral presentation*). Tracking live marine animals. Webinar: NASA Endeavor STEM Program 2020. 
 

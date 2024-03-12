@@ -13,7 +13,7 @@
 
 <title>Teaching</title>
 
-<script src="site_libs/header-attrs-2.14/header-attrs.js"></script>
+<script src="site_libs/header-attrs-2.25/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/cosmo.min.css" rel="stylesheet" />
@@ -142,11 +142,15 @@ $(document).ready(function () {
     href = "index.html";
   var menuAnchor = $('a[href="' + href + '"]');
 
-  // mark it active
-  menuAnchor.tab('show');
-
-  // if it's got a parent navbar menu mark it active as well
-  menuAnchor.closest('li.dropdown').addClass('active');
+  // mark the anchor link active (and if it's in a dropdown, also mark that active)
+  var dropdown = menuAnchor.closest('li.dropdown');
+  if (window.bootstrap) { // Bootstrap 4+
+    menuAnchor.addClass('active');
+    dropdown.find('> .dropdown-toggle').addClass('active');
+  } else { // Bootstrap 3
+    menuAnchor.parent().addClass('active');
+    dropdown.addClass('active');
+  }
 
   // Navbar adjustments
   var navHeight = $(".navbar").first().height() + 15;
@@ -175,8 +179,8 @@ $(document).ready(function () {
   border-radius: 4px;
 }
 
-.tabset-dropdown > .nav-tabs > li.active:before {
-  content: "";
+.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "\e259";
   font-family: 'Glyphicons Halflings';
   display: inline-block;
   padding: 10px;
@@ -184,16 +188,9 @@ $(document).ready(function () {
 }
 
 .tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
-  content: "&#xe258;";
-  border: none;
-}
-
-.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
-  content: "";
+  content: "\e258";
   font-family: 'Glyphicons Halflings';
-  display: inline-block;
-  padding: 10px;
-  border-right: 1px solid #ddd;
+  border: none;
 }
 
 .tabset-dropdown > .nav-tabs > li.active {
@@ -278,47 +275,72 @@ $(document).ready(function () {
 </div>
 
 
-<p><img src="gradterpexchange.png" /></p>
-<div id="graduate-teaching-experience" class="section level3">
-<h3><strong>Graduate Teaching Experience</strong>:</h3>
-<p><em>University of Maryland, Department of Biology</em></p>
+<p><img src="gradterpexchange.png" /> <br></p>
+<div
+id="suny-college-of-environmental-science-and-forestry-spring-2023-spring-2024"
+class="section level3">
+<h3><strong>SUNY College of Environmental Science and Forestry (Spring
+2023-Spring 2024)</strong>:</h3>
 <ul>
-<li>BSCI 160/161: Principles of Ecology and Evolution Laboratory and
-Lecture</li>
-<li>BSCI 334/335: Mammalogy Laboratory and Lecture</li>
-<li>BSCI 170/171: Principles of Molecular and Cellular Biology
-Laboratory and Lecture</li>
-<li>BSCI 202/201: Human Anatomy and Physiology II Laboratory and
-Lecture</li>
-<li>STAT 689: Research Interaction in Teams, Movement Ecology</li>
+<li><p><strong>Full Time Instructor</strong>, EFB 654 <em>Intro to
+R</em> (Graduate, with undergraduates by petition): Developed
+independent lecture curriculum, taught lectures</p></li>
+<li><p><strong>Full Time Co-Instructor</strong>, EFB 483 <em>Mammal
+Diversity</em> (Undergraduate): Developed independent lecture and
+laboratory curriculum, managed teaching assistants and laboratory,
+co-taught lectures</p></li>
+<li><p><strong>Part Time Co-Instructor</strong>, EFB 796 <em>Techniques
+and Concepts in Spatial and Movement Ecology</em> (Graduate):
+Collaboratively taught and developed lecture content, including an
+online open-source movement ecology book, <a
+href="https://eligurarie.github.io/MovementEcologyBook/">Techniques and
+Concepts in Movement Ecology Book (Work in Progress)</a></p></li>
 </ul>
 <p><br></p>
 </div>
-<div id="external-teaching-lectures" class="section level3">
-<h3><strong>External Teaching</strong> (<em>Lectures</em>):</h3>
+<div id="university-of-maryland-college-park-fall-2017-spring-2022"
+class="section level3">
+<h3><strong>University of Maryland College Park (Fall 2017-Spring
+2022)</strong>:</h3>
 <ul>
-<li><em>Learning and Navigation</em>. Guest Lecturer: University of
-Maryland, Principles of Ecology and Evolution.</li>
-<li><em>Introduction to Marine Mammals</em>. Guest Lecturer: University
-of Maryland, Mammalogy.</li>
-<li><em>Using RStudio &amp; GitHub for Project Management</em>. Guest
-Lecturer: University of Maryland, Research Interaction in Teams.</li>
+<li><p><strong>Teaching Assistant and Lab Manager</strong>, BSCI 334/335
+<em>Mammalogy</em> (Undergraduate): Developed laboratory curriculum,
+managed and organized all laboratory materials, taught all laboratory
+sections, assisted with lecture grading and proctoring <em>Note:
+Included hybrid classes</em></p></li>
+<li><p><strong>Teaching Assistant</strong>, STAT 689 <em>Research
+Interaction in Teams, Movement Ecology</em> (Graduate, with
+undergraduates by petition): Managed GitHub repository and management of
+class research projects and code</p></li>
+<li><p><strong>Teaching Assistant</strong>, BSCI 160/161 <em>Principles
+of Ecology and Evolution Laboratory and Lecture</em> (Undergraduate):
+Taught laboratory material and assisted with lecture grading and
+proctoring</p></li>
+<li><p><strong>Teaching Assistant</strong>, BSCI 170/171 <em>Principles
+of Molecular and Cellular Biology Laboratory and Lecture</em>
+(Undergraduate): Taught laboratory material and assisted with lecture
+grading and proctoring</p></li>
+<li><p><strong>Teaching Assistant</strong>, BSCI 202/201 <em>Human
+Anatomy and Physiology II Laboratory and Lecture</em> (Undergraduate):
+Taught laboratory material and assisted with lecture grading and
+proctoring. <em>Note: Included hybrid and fully-online
+classes</em></p></li>
 </ul>
 <p><br></p>
 </div>
 <div id="developed-syllabi" class="section level3">
 <h3><strong>Developed Syllabi</strong>:</h3>
-<p>I teach Mammalogy (BSCI 334/335) in the Spring and as the sole
-teaching assistant for the course, I have been “revamping” it and
-developing/updating content. This is reflected in the syllabus written
-by me below.</p>
-<p><em>Soon to come</em>: I am working on re-creating the TA manual and
-creating R-markdown documents for student final projects for this
-course.</p>
-<div class="figure">
-<embed src="course_syllabus.pdf" style="width:75.0%" />
-<p class="caption">Image Title</p>
-</div>
+<p><strong>EFB 654</strong>, <em>Intro to R</em></p>
+<p><embed src="EFB654_IntrotoR_2024.pdf" style="width:75.0%" /></p>
+<p><br></p>
+<p><strong>EFB 483</strong>, <em>Mammal Diversity</em></p>
+<p><embed src="EFB483_LectureSyllabus_11032023.pdf"
+style="width:75.0%" /></p>
+<p><br></p>
+<p><strong>BSCI 335</strong>, <em>Mammalogy</em></p>
+<p><embed src="Syllabus_BSCI335_NB_Spring2022.pdf"
+style="width:75.0%" /></p>
+<p><br></p>
 </div>
 
 <p>Copyright &copy; 2016 Skynet, Inc. All rights reserved.</p>
